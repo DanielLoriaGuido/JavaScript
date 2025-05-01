@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LEAP YEAR CALCULATOR</h1>
+    <script>
+        var year = prompt("年を入力してください");
+        var eho = "";
+        var result = "";
+
+        switch (year % 10) {  //estudiar la sintaxis del switch (case)
+            case  0:
+            case  5:
+                eho = "西南西";
+                break;
+            case 1:
+            case 3:
+            case 6:
+            case 8:
+                eho = "南南東"
+                break;
+            case 2:
+            case 7:
+                eho = "北北西"
+                break;
+            case 4:
+            case 9:
+                eho = "東北東"
+                break;
+        }
+
+
+        if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+            result = "閏年";
+        }else {
+            result = "閏年ではない";
+        }
+
+
+        alert(year +" " + eho + " " +result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividers</title>
+</head>
+<body>
+    <h1>Dividers</h1>
+    <script>
+        /*var number = prompt("変数を入力してください");
+        number = parseInt (number);  //numeros enteros
+        var divider = "";
+        for (i = 1; i <=number; i++) {
+            if (number % i === 0){ //si al dividir number este tiene un 余り de exactamente 0
+                divider += i + ","; //separa los divisores por comas
+            }
+        }
+        alert(number + " can be divided by: " + divider + " です。");*/
+        //Si bien el codigo anterior es funcional tiene un error que provoca que los divisores se muestren con , incluyendo al ultimo
+        
+        var number = prompt("変数を入力してください");
+
+        number = parseInt(number);  // Convertir la entrada en un número entero
+
+    　　var divider = "";
+    　　var divisors = [];　//creamos un array para guardar los divisores
+
+   　　 // Encontrar los divisores
+    　　for (i = 1; i <= number; i++) {
+       　　 if (number % i === 0) { // Si el número es divisible por i
+         　　   divisors.push(i); // Guardamos los divisores en un array
+       　　 }
+   　　 }
+
+    　　// Crear la cadena con los divisores separados por coma, sin coma después del último
+   　　 divider = divisors.join(","); 
+
+    　　alert(number + " can be divided by: " + divider + " です。");
+    </script>
+    
+</body>
+</html>
